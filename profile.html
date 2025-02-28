@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Demo-Project</title>
+  <link rel="stylesheet" href="/css/main.css" />
+</head>
+<body>
+  <!-- Шапка сайта -->
+  <header>
+    <div class="header-container">
+      <div class="logo">Demo-Project</div>
+      <nav class="nav-links">
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="mylist.html">Мой список</a></li>
+          <li><a href="profile.html" class="active">Профиль</a></li>
+          <li><a href="#">О проекте</a></li>
+          <li><a href="login.html">Вход</a></li>
+          <li><a href="register.html">Регистрация</a></li>
+        </ul>
+      </nav>
+      <div class="header-search">
+        <input type="text" id="mainSearch" placeholder="Поиск...">
+        <button type="button">Искать</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Основной контейнер -->
+  <div class="container">
+    <main>
+      <section class="profile">
+        <h2>Профиль пользователя</h2>
+        <div class="profile-header">
+          <img src="/img/av6.jpg" alt="Аватар профиля" class="avatar">
+          <div class="profile-userinfo">
+            <h3 class="username">SnapSw1sh</h3>
+            <p class="description">
+              Краткое описание, биография или статус пользователя.
+              <br>
+              Можно написать пару слов о себе, любимые жанры, предпочтения и т.д.
+            </p>
+          </div>
+        </div>
+        <div class="profile-stats">
+          <h3>Статистика</h3>
+          <div class="stats-grid">
+            <div class="stat-item">
+              <span class="stat-label">Просмотрено фильмов:</span>
+              <span class="stat-value">20</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">Просмотрено сериалов:</span>
+              <span class="stat-value">15</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">Прочитано книг:</span>
+              <span class="stat-value">10</span>
+            </div>
+          </div>
+        </div>
+        <div class="profile-favorites">
+          <h3>Любимые произведения</h3>
+          <ul>
+            <li>«Твоё имя» (фильм)</li>
+            <li>«Hunter x hunter» (сериал)</li>
+            <li>«Токийский гуль» (книга)</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

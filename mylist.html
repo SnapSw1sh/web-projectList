@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Demo-Project</title>
+  <link rel="stylesheet" href="/css/main.css" />
+</head>
+<body>
+  <!-- Шапка сайта -->
+  <header>
+    <div class="header-container">
+      <div class="logo">Demo-Project</div>
+      <nav class="nav-links">
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="mylist.html" class="active">Мой список</a></li>
+          <li><a href="profile.html">Профиль</a></li>
+          <li><a href="#">О проекте</a></li>
+          <li><a href="login.html">Вход</a></li>
+          <li><a href="register.html">Регистрация</a></li>
+        </ul>
+      </nav>
+      <div class="header-search">
+        <input type="text" id="mainSearch" placeholder="Поиск...">
+        <button type="button">Искать</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Основной контейнер -->
+  <div class="container">
+    <!-- Боковая панель с фильтрами -->
+    <aside>
+      <h2>Фильтры</h2>
+      <div class="filter-box">
+        <label for="typeFilter">Тип</label>
+        <select id="typeFilter">
+          <option value="">Все</option>
+          <option value="film">Фильмы</option>
+          <option value="series">Сериалы</option>
+          <option value="book">Книги</option>
+        </select>
+        <label for="genreFilter">Жанр</label>
+        <select id="genreFilter">
+            <option value="">Все жанры</option>
+            <option value="action">Боевик</option>
+            <option value="drama">Драма</option>
+            <option value="comedy">Комедия</option>
+            <option value="Thriller">Триллер</option>
+            <option value="Horror">Ужасы</option>
+            <option value="Science Fiction">Научная фантастика</option>
+            <option value="Fantasy">Фэнтези</option>
+            <option value="Detective">Детектив</option>
+            <option value="Melodrama">Мелодрама</option>
+            <option value="Romance">Романтика</option>
+            <option value="Adventure">Приключения</option>
+            <option value="Historical">Исторический</option>
+            <option value="War">Военный</option>
+            <option value="Animation">Анимация</option>
+            <option value="Family">Семейный</option>
+            <option value="Musical">Музыкальный</option>
+            <option value="Crime">Криминал</option>
+            <option value="Biography">Биография</option>
+            <option value="Mystery">Мистика</option>
+            <option value="Sports">Спорт</option>
+            <option value="Post-Apocalyptic">Постапокалипсис</option>
+            <option value="Surrealism">Сюрреализм</option>
+        </select>
+        <label for="sortBy">Сортировка</label>
+        <select id="sortBy">
+          <option value="date">По дате добавления</option>
+          <option value="rating">По рейтингу</option>
+          <option value="alphabet">По алфавиту</option>
+        </select>
+      </div>
+    </aside>
+
+    <!-- Основной контент: форма добавления и список произведений -->
+    <main>
+      <!-- Форма добавления нового произведения -->
+      <section class="add-item">
+        <h2>Добавить новое произведение</h2>
+        <form>
+          <div>
+            <label for="title">Название</label>
+            <input type="text" id="title" name="title" placeholder="Введите название...">
+          </div>
+          <div>
+            <label for="type">Тип</label>
+            <select id="type" name="type">
+              <option value="film">Фильм</option>
+              <option value="series">Сериал</option>
+              <option value="book">Книга</option>
+            </select>
+          </div>
+          <div>
+            <label for="rating">Оценка (0 - 10)</label>
+            <input type="number" min="0" max="10" step="1" id="rating" name="rating">
+          </div>
+          <div>
+            <label for="review">Отзыв</label>
+            <textarea id="review" name="review" rows="3" placeholder="Ваши впечатления..."></textarea>
+          </div>
+          <button type="submit">Добавить</button>
+        </form>
+      </section>
+
+      <!-- Список произведений -->
+      <section class="item-list">
+        <h2>Мой список</h2>
+        <div class="items">
+          <!-- Пример карточки произведения -->
+          <div class="card" data-type="film" data-genre="action" data-rating="9" data-date="2023-04-15">
+            <h3>Пример: Фильм "Interstellar"</h3>
+            <p>Тип: Фильм</p>
+            <p>Оценка: 9/10</p>
+            <p class="detail">Сюжет о космических путешествиях и поиске нового дома для человечества.</p>
+            <div class="actions">
+              <button class="edit">Редактировать</button>
+              <button class="delete">Удалить</button>
+            </div>
+          </div>
+          <!-- Еще одна карточка -->
+          <div class="card" data-type="book" data-genre="drama" data-rating="10" data-date="2023-03-10">
+            <h3>Пример: Книга "Токийский гуль"</h3>
+            <p>Тип: Книга</p>
+            <p>Оценка: 10/10</p>
+            <p class="detail">Драма про противостояние гулей и людей.</p>
+            <div class="actions">
+              <button class="edit">Редактировать</button>
+              <button class="delete">Удалить</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
