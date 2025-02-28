@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  
+  /* --- Шапка сайта --- */
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #2F3A54;
+    color: #fff;
+    padding: 10px 20px;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-links ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+  }
+  
+  .nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+  }
+  
+  .nav-links ul li a:hover,
+  .nav-links ul li a.active {
+    text-decoration: underline;
+  }
+  
+  .header-search {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: 200px; /* компактное поле, чтобы оно вписывалось справа */
+  }
+  
+  .header-search input[type="text"] {
+    width: 100%;
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.9rem;
+  }
+  
+  .header-search button {
+    padding: 6px 10px;
+    border: none;
+    background-color: #fff;
+    color: #2F3A54;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+  }
+  
+  .header-search button:hover {
+    background-color: #e0e0e0;
+  }
+  
+  /* Меню сайта (нижняя строка) */
+  nav {
+    background-color: #2F3A54;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 10px 20px;
+  }
+  nav li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+  }
+  nav li a:hover {
+    color: #ccc;
+  }
+  nav ul li a.active {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  
+  /* Основной контейнер */
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    display: flex;
+    gap: 20px;
+  }
+  
+  /* --- Главная страница (home-container) --- */
+  .home-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+  }
+  
+  /* Активности (левый столбец) */
+  .activities {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+  }
+  .activities h2 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+  }
+  .activity-card {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: #f8f8f8;
+    border: 1px solid #eee;
+  }
+  .activity-user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 60px;
+  }
+  .activity-user .username {
+    font-size: 0.85rem;
+    margin-top: 4px;
+    text-align: center;
+  }
+  .activity-content p {
+    margin-bottom: 4px;
+    font-size: 0.9rem;
+  }
+  .activity-time {
+    font-size: 0.75rem;
+    color: #999;
+  }
+  
+  /* Рецензии (правый столбец) */
+  .reviews {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+  }
+  .reviews h2 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+  }
+  .review-card {
+    background-color: #f8f8f8;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    padding: 10px;
+    margin-bottom: 15px;
+  }
+  .review-header {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .review-header .username {
+    font-weight: bold;
+    font-size: 0.9rem;
+    display: block;
+  }
+  .review-work-title {
+    display: block;
+    font-size: 0.8rem;
+    color: #555;
+  }
+  .review-body p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 8px;
+  }
+  .review-actions {
+    text-align: right;
+  }
+  .review-actions .like-btn {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 4px 8px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: background-color 0.2s;
+  }
+  .review-actions .like-btn:hover {
+    background-color: #f0f0f0;
+  }
